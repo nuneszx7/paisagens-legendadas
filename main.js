@@ -37,10 +37,17 @@ const imagens = [
 
 
 function criarImagem (srcImagem){
+
     const galeria = document.getElementById('galeria')
+
     const imagem = document.createElement('img')
-    imagem.src = srcImagem.url  
+    const legenda = document.createElement('figcaption')
+
+    imagem.src = srcImagem.url
+    legenda.textContent = srcImagem.nome
+
     galeria.appendChild(imagem)
+    galeria.appendChild(legenda)
 
 }
 

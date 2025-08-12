@@ -10,9 +10,9 @@ body {
 }
 
 .galeria {
-    width: auto;
-    display: columns;
-    columns: 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
     background-color: rgb(214, 255, 248);
 }
 
@@ -27,23 +27,22 @@ figure {
     display: flex;
     flex-flow: column;
     padding: 5px;
-    width: 80%;
+    width: 100%;
     margin: auto;
   }
-  
-  img {
-    width: 100%;
-    padding-block: 8px;
-  }
-  
+    
   figcaption {
-    margin-top: 0px;
+    margin-top: -10px;
     background-color: #97fff3;
     color: #008a76;
     font: italic smaller sans-serif;
     font-size: 1rem;
-    padding: 5px;
+    padding: 7px;
     text-align: center
 
+  }
+
+  .galeria figcaption {
+    color: rgb(0, 152, 179);
   }
   
